@@ -1,159 +1,35 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Mis consultas a la IA - Julia Priolo</title>
-    <style>
-        :root {
-            --bg: #111;
-            --card: #1a1a1a;
-            --text: #eee;
-            --accent: #ff4d4d;
-        }
+<h1>¿Cuándo realmente necesito la IA?</h1>
+<p class="tagline">Un análisis de mis consultas según cuánto me costaría resolverlas sin ayuda.</p>
 
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
+<div class="intro-box">
+    <p>
+    Durante varias semanas registré mis consultas a herramientas de inteligencia artificial para entender mejor en qué situaciones realmente las necesito. 
+    Más que los temas en sí, lo que me interesaba analizar era el nivel de dependencia: cuánto me costaría resolver cada consulta por mi cuenta, sin recurrir a la IA.
+    </p>
 
-        .main-content {
-            max-width: 900px;
-            width: 100%;
-        }
+    <p>
+    A partir de eso, clasifiqué cada interacción según el nivel de necesidad: desde casos donde la IA es solo una comodidad, hasta situaciones donde se vuelve una herramienta clave para avanzar.
+    </p>
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
-
-        .tagline {
-            color: #888;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .intro-box {
-            background: var(--card);
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            line-height: 1.6;
-            border: 1px solid #333;
-        }
-
-        .intro-box p {
-            margin-top: 0;
-        }
-
-        .levels {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .level {
-            flex: 1;
-            min-width: 200px;
-            background: #222;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-        }
-
-        .level b {
-            display: block;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-        }
-
-        .level-high b { color: #ff4d4d; }
-        .level-mid b { color: #ffb84d; }
-        .level-low b { color: #4dff88; }
-
-        .viz-container {
-            background: white;
-            padding: 20px;
-            border-radius: 20px;
-            overflow-x: auto;
-            display: flex;
-            justify-content: center;
-        }
-
-        object {
-            max-width: 100%;
-            height: auto;
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            opacity: 0.4;
-            font-size: 0.8rem;
-        }
-    </style>
-</head>
-<body>
-
-<div class="main-content">
-    <h1>¿Cómo uso realmente la IA?</h1>
-    <p class="tagline">Un recorrido por mis consultas y el tipo de esfuerzo que implican en mi día a día.</p>
-
-    <div class="intro-box">
-        <p>
-        Durante varias semanas registré mis consultas a herramientas de inteligencia artificial para entender cómo las uso en la práctica. 
-        Más allá de los temas, lo interesante no es solo <i>qué</i> pregunto, sino <i>cuánto esfuerzo cognitivo</i> implican esas consultas.
-        </p>
-
-        <p>
-        Para analizarlo, clasifiqué cada interacción según el nivel de involucramiento que me exige: desde respuestas rápidas hasta situaciones donde necesito pensar, iterar y construir a partir de lo que obtengo.
-        </p>
-
-        <p>
-        En general, la mayoría de mis consultas se concentran en niveles de esfuerzo medio y bajo, aunque los picos de mayor intensidad aparecen en contextos académicos.
-        </p>
-        
-        <div class="levels">
-            <div class="level level-high">
-                <b>Nivel Alto</b>
-                Consultas complejas que requieren análisis, toma de decisiones o construcción desde cero. 
-                La IA funciona como una herramienta de apoyo, pero el proceso depende fuertemente de mi razonamiento.
-            </div>
-            <div class="level level-mid">
-                <b>Nivel Medio</b>
-                Interacciones que implican cierto procesamiento: adaptar respuestas, iterar ideas o profundizar en una solución. 
-                No es automático, pero tampoco completamente demandante.
-            </div>
-            <div class="level level-low">
-                <b>Nivel Bajo</b>
-                Consultas rápidas y directas, similares a una búsqueda tradicional. 
-                La IA actúa como un atajo para obtener información sin mayor elaboración.
-            </div>
+    <p>
+    En general, la mayoría de mis consultas no son estrictamente necesarias, pero los momentos donde sí lo son aparecen sobre todo en contextos más complejos, como los académicos.
+    </p>
+    
+    <div class="levels">
+        <div class="level level-high">
+            <b>Nivel Alto</b>
+            Consultas que serían difíciles, largas o poco eficientes de resolver por mi cuenta. 
+            En estos casos, la IA se vuelve prácticamente indispensable para avanzar.
+        </div>
+        <div class="level level-mid">
+            <b>Nivel Medio</b>
+            Situaciones que podría resolver sola, pero con más tiempo o esfuerzo. 
+            La IA acelera el proceso y ayuda a destrabar ideas.
+        </div>
+        <div class="level level-low">
+            <b>Nivel Bajo</b>
+            Consultas simples que podría resolver fácilmente sin IA. 
+            Acá funciona más como una comodidad que como una necesidad real.
         </div>
     </div>
-
-    <div class="viz-container">
-        <object
-            type="image/svg+xml"
-            data="https://juliapriolo.github.io/infovis/rawgraph-personal.svg"
-            width="860"
-            height="600">
-        </object>
-    </div>
-
-    <footer>Julia Priolo - Trabajo Práctico 1 - InfoVis 2024</footer>
 </div>
-
-</body>
-</html>
