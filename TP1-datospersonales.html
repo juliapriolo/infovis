@@ -7,9 +7,9 @@
     <title>Mis consultas a la IA - Julia Priolo</title>
     <style>
         :root {
-            --bg: #111;
-            --card: #1a1a1a;
-            --text: #eee;
+            --bg: #0a0a0a;
+            --card: #161616;
+            --text: #ededed;
             --low: #4dff88;  /* Verde */
             --mid: #ff79c6;  /* Rosa */
             --high: #ff4d4d; /* Rojo */
@@ -26,16 +26,16 @@
         }
 
         .main-content {
-            max-width: 900px;
+            max-width: 940px;
             width: 100%;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #eee, #888);
+            background: linear-gradient(90deg, #ffffff, #666666);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -48,62 +48,77 @@
 
         .intro-box {
             background: var(--card);
-            padding: 25px;
-            border-radius: 20px;
-            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 24px;
+            margin-bottom: 50px;
             line-height: 1.6;
-            border: 1px solid #333;
+            border: 1px solid #222;
         }
 
         .levels {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .level {
             flex: 1;
             min-width: 200px;
-            background: rgba(255,255,255,0.03);
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            border-top: 3px solid transparent;
+            background: rgba(255,255,255,0.02);
+            padding: 20px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            border-bottom: 4px solid transparent;
         }
 
-        .level b { display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        
+        .level b { display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1.5px; }
         .level-low { border-color: var(--low); }
         .level-low b { color: var(--low); }
-        
         .level-mid { border-color: var(--mid); }
         .level-mid b { color: var(--mid); }
-        
         .level-high { border-color: var(--high); }
         .level-high b { color: var(--high); }
 
         .viz-section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .viz-section h2 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #ccc;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .viz-description {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            max-width: 700px;
         }
 
         .viz-container {
-            background: white; /* Blanco para que resalten los colores del gráfico */
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #fff; /* Fondo blanco para que los gráficos luzcan sus colores originales */
+            padding: 25px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        object {
+            max-width: 100%;
+            height: auto;
         }
 
         footer {
-            margin-top: 60px;
+            margin-top: 80px;
             text-align: center;
-            opacity: 0.3;
+            padding-bottom: 40px;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            color: #444;
             font-size: 0.8rem;
         }
     </style>
@@ -115,33 +130,51 @@
     <p class="tagline">Un análisis de mis consultas según cuánto me costaría resolverlas sin ayuda.</p>
 
     <div class="intro-box">
-        <p>Durante varias semanas registré mis interacciones con la IA para entender mejor en qué situaciones se vuelve indispensable. Más allá de los temas, analicé el nivel de dependencia: <strong>¿qué tanto me costaría resolver esto por mi cuenta?</strong></p>
-        
-        <p>En general, la mayoría de mis consultas son una comodidad, pero el nivel de necesidad sube cuando los problemas se vuelven más abstractos o académicos.</p>
+        <p>Durante varias semanas registré mis consultas para entender en qué situaciones realmente las necesito. Más allá de los temas, analicé el nivel de dependencia: <strong>¿cuánto me costaría resolver cada consulta por mi cuenta?</strong></p>
 
+        <p>En general, la mayoría de mis interacciones son por comodidad, pero los momentos donde la IA se vuelve clave aparecen sobre todo en contextos académicos o lógicos.</p>
+        
         <div class="levels">
             <div class="level level-high">
-                <b>Nivel Alto (Rojo)</b>
-                Cosas difíciles o muy largas de resolver sola. Acá la IA es clave para no trabarme.
+                <b>Nivel Alto</b>
+                Consultas difíciles o  largas de resolver sola. La IA es una herramienta indispensable para avanzar.
             </div>
             <div class="level level-mid">
-                <b>Nivel Medio (Rosa)</b>
-                Podría resolverlo, pero con mucho más esfuerzo. Me sirve para acelerar y "pelotear" ideas.
+                <b>Nivel Medio</b>
+                Situaciones que podría resolver, pero con más esfuerzo y tiempo. Me ayuda a destrabar ideas.
             </div>
             <div class="level level-low">
-                <b>Nivel Bajo (Verde)</b>
-                Consultas simples. Es más por practicidad que por necesidad real.
+                <b>Nivel Bajo</b>
+                Consultas simples que resolvería fácil sin IA. Funciona más como una comodidad.
             </div>
         </div>
     </div>
 
     <div class="viz-section">
-        <h2>Volumen de consultas durante Marzo</h2>
-        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">
-            Este gráfico detalla la cantidad de consultas diarias. Los colores indican la intensidad de la necesidad en cada caso.
+        <h2>1. Proporción de necesidad por ámbito</h2>
+        <p class="viz-description">
+            Este gráfico muestra cómo se distribuye mi nivel de necesidad según el área de la consulta. 
+            Es interesante ver dónde se concentra el esfuerzo más alto.
         </p>
         <div class="viz-container">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
+            <object
+                type="image/svg+xml"
+                data="https://juliapriolo.github.io/infovis/rawgraph-personal.svg"
+                width="860"
+                height="600">
+            </object>
+        </div>
+    </div>
+
+    <div class="viz-section">
+        <h2>2. Frecuencia de consultas en Marzo</h2>
+        <p class="viz-description">
+            Acá se ve la cantidad de consultas diarias durante el mes. Los colores de las barras representan la necesidad: 
+            <span style="color:var(--low)">verde (baja)</span>, 
+            <span style="color:var(--mid)">rosa (media)</span> y 
+            <span style="color:var(--high)">rojo (alta)</span>.
+        </p>
+        <div class="viz-container" style="display: block;"> <div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
                 <script src="https://public.flourish.studio/resources/embed.js"></script>
                 <noscript>
                     <img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" />
