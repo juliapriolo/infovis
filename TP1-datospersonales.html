@@ -1,35 +1,157 @@
-<h1>¿Cuándo realmente necesito la IA?</h1>
-<p class="tagline">Un análisis de mis consultas según cuánto me costaría resolverlas sin ayuda.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Mis consultas a la IA - Julia Priolo</title>
+    <style>
+        :root {
+            --bg: #111;
+            --card: #1a1a1a;
+            --text: #eee;
+            --low: #4dff88;  /* Verde */
+            --mid: #ff79c6;  /* Rosa */
+            --high: #ff4d4d; /* Rojo */
+        }
 
-<div class="intro-box">
-    <p>
-    Durante varias semanas registré mis consultas a herramientas de inteligencia artificial para entender mejor en qué situaciones realmente las necesito. 
-    Más que los temas en sí, lo que me interesaba analizar era el nivel de dependencia: cuánto me costaría resolver cada consulta por mi cuenta, sin recurrir a la IA.
-    </p>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
 
-    <p>
-    A partir de eso, clasifiqué cada interacción según el nivel de necesidad: desde casos donde la IA es solo una comodidad, hasta situaciones donde se vuelve una herramienta clave para avanzar.
-    </p>
+        .main-content {
+            max-width: 900px;
+            width: 100%;
+        }
 
-    <p>
-    En general, la mayoría de mis consultas no son estrictamente necesarias, pero los momentos donde sí lo son aparecen sobre todo en contextos más complejos, como los académicos.
-    </p>
-    
-    <div class="levels">
-        <div class="level level-high">
-            <b>Nivel Alto</b>
-            Consultas que serían difíciles, largas o poco eficientes de resolver por mi cuenta. 
-            En estos casos, la IA se vuelve prácticamente indispensable para avanzar.
-        </div>
-        <div class="level level-mid">
-            <b>Nivel Medio</b>
-            Situaciones que podría resolver sola, pero con más tiempo o esfuerzo. 
-            La IA acelera el proceso y ayuda a destrabar ideas.
-        </div>
-        <div class="level level-low">
-            <b>Nivel Bajo</b>
-            Consultas simples que podría resolver fácilmente sin IA. 
-            Acá funciona más como una comodidad que como una necesidad real.
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #eee, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .intro-box {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            border: 1px solid #333;
+        }
+
+        .levels {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .level {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(255,255,255,0.03);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            border-top: 3px solid transparent;
+        }
+
+        .level b { display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .level-low { border-color: var(--low); }
+        .level-low b { color: var(--low); }
+        
+        .level-mid { border-color: var(--mid); }
+        .level-mid b { color: var(--mid); }
+        
+        .level-high { border-color: var(--high); }
+        .level-high b { color: var(--high); }
+
+        .viz-section {
+            margin-bottom: 50px;
+        }
+
+        .viz-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .viz-container {
+            background: white; /* Blanco para que resalten los colores del gráfico */
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            opacity: 0.3;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content">
+    <h1>¿Cuándo realmente necesito la IA?</h1>
+    <p class="tagline">Un análisis de mis consultas según cuánto me costaría resolverlas sin ayuda.</p>
+
+    <div class="intro-box">
+        <p>Durante varias semanas registré mis interacciones con la IA para entender mejor en qué situaciones se vuelve indispensable. Más allá de los temas, analicé el nivel de dependencia: <strong>¿qué tanto me costaría resolver esto por mi cuenta?</strong></p>
+        
+        <p>En general, la mayoría de mis consultas son una comodidad, pero el nivel de necesidad sube cuando los problemas se vuelven más abstractos o académicos.</p>
+
+        <div class="levels">
+            <div class="level level-high">
+                <b>Nivel Alto (Rojo)</b>
+                Cosas difíciles o muy largas de resolver sola. Acá la IA es clave para no trabarme.
+            </div>
+            <div class="level level-mid">
+                <b>Nivel Medio (Rosa)</b>
+                Podría resolverlo, pero con mucho más esfuerzo. Me sirve para acelerar y "pelotear" ideas.
+            </div>
+            <div class="level level-low">
+                <b>Nivel Bajo (Verde)</b>
+                Consultas simples. Es más por practicidad que por necesidad real.
+            </div>
         </div>
     </div>
+
+    <div class="viz-section">
+        <h2>Volumen de consultas durante Marzo</h2>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">
+            Este gráfico detalla la cantidad de consultas diarias. Los colores indican la intensidad de la necesidad en cada caso.
+        </p>
+        <div class="viz-container">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" />
+                </noscript>
+            </div>
+        </div>
+    </div>
+
+    <footer>Julia Priolo - Trabajo Práctico 1 - InfoVis 2026</footer>
 </div>
+
+</body>
+</html>
