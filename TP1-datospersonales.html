@@ -98,13 +98,24 @@
         }
 
         .viz-container {
-            background: #fff; /* Fondo blanco para que los gráficos luzcan sus colores originales */
+            background: #fff; 
             padding: 25px;
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             overflow: hidden;
+        }
+
+        .tool-credit {
+            align-self: flex-end;
+            margin-top: 15px;
+            font-size: 0.75rem;
+            color: #999;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         object {
@@ -137,7 +148,7 @@
         <div class="levels">
             <div class="level level-high">
                 <b>Nivel Alto</b>
-                Consultas difíciles o  largas de resolver sola. La IA es una herramienta indispensable para avanzar.
+                Consultas difíciles o largas de resolver sola. La IA es una herramienta indispensable para avanzar.
             </div>
             <div class="level level-mid">
                 <b>Nivel Medio</b>
@@ -151,7 +162,26 @@
     </div>
 
     <div class="viz-section">
-        <h2>1. Proporción de necesidad por ámbito</h2>
+        <h2>1. Frecuencia de consultas en Marzo</h2>
+        <p class="viz-description">
+            Acá se ve la cantidad de consultas diarias durante el mes. Los colores de las barras representan la necesidad: 
+            <span style="color:var(--low)">verde (baja)</span>, 
+            <span style="color:var(--mid)">rosa (media)</span> y 
+            <span style="color:var(--high)">rojo (alta)</span>.
+        </p>
+        <div class="viz-container"> 
+            <div class="flourish-embed flourish-chart" data-src="visualisation/28285946" style="width: 100%;">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" />
+                </noscript>
+            </div>
+            <span class="tool-credit">Realizado con Flourish</span>
+        </div>
+    </div>
+
+    <div class="viz-section">
+        <h2>2. Proporción de necesidad por ámbito</h2>
         <p class="viz-description">
             Este gráfico muestra cómo se distribuye mi nivel de necesidad según el área de la consulta. 
             Es interesante ver dónde se concentra el esfuerzo más alto.
@@ -163,23 +193,7 @@
                 width="860"
                 height="600">
             </object>
-        </div>
-    </div>
-
-    <div class="viz-section">
-        <h2>2. Frecuencia de consultas en Marzo</h2>
-        <p class="viz-description">
-            Acá se ve la cantidad de consultas diarias durante el mes. Los colores de las barras representan la necesidad: 
-            <span style="color:var(--low)">verde (baja)</span>, 
-            <span style="color:var(--mid)">rosa (media)</span> y 
-            <span style="color:var(--high)">rojo (alta)</span>.
-        </p>
-        <div class="viz-container" style="display: block;"> <div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
-                <script src="https://public.flourish.studio/resources/embed.js"></script>
-                <noscript>
-                    <img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" />
-                </noscript>
-            </div>
+            <span class="tool-credit">Realizado con RAWGraphs</span>
         </div>
     </div>
 
