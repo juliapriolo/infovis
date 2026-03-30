@@ -97,19 +97,26 @@
             max-width: 700px;
         }
 
+        /* CORRECCIÓN AQUÍ: Ajuste del contenedor para Flourish */
         .viz-container {
             background: #fff; 
-            padding: 25px;
+            padding: 20px; /* Reducido para dar más aire al gráfico */
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: block; /* Cambiado de flex a block */
+            width: auto;
             overflow: hidden;
         }
 
+        /* Asegura que el embed ocupe todo el ancho y tenga altura mínima */
+        .flourish-embed {
+            width: 100% !important;
+            min-height: 450px; /* Evita que el gráfico se colapse verticalmente */
+        }
+
         .tool-credit {
-            align-self: flex-end;
+            display: block;
+            text-align: right;
             margin-top: 15px;
             font-size: 0.75rem;
             color: #999;
@@ -121,6 +128,8 @@
         object {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         footer {
@@ -170,7 +179,12 @@
             <span style="color:var(--high)">rojo (alta)</span>.
         </p>
         <div class="viz-container"> 
-<div class="flourish-embed flourish-chart" data-src="visualisation/28285946"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" /></noscript></div>
+           <div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
+               <script src="https://public.flourish.studio/resources/embed.js"></script>
+               <noscript><img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" /></noscript>
+           </div>
+            <span class="tool-credit">Realizado con Flourish</span>
+        </div>
     </div>
 
     <div class="viz-section">
