@@ -82,15 +82,6 @@ h1 {
     font-size: 0.8rem;
     color: #777;
 }
-
-.tableauPlaceholder {
-    width: 100%;
-}
-
-.tableauPlaceholder object {
-    width: 100% !important;
-    height: 600px !important;
-}
 </style>
 </head>
 
@@ -157,24 +148,46 @@ El uso se distribuye de forma bastante homogénea durante la semana, lo que sugi
 </p>
 </div>
 
-<!-- 3 -->
+<!-- 3 TABLEAU NUEVO -->
 <div class="viz-section">
-<h2>3. ¿Existen patrones en los días y niveles de uso?</h2>
+<h2>3. ¿Existen patrones en los días y tipos de uso?</h2>
 
 <div class="viz-container">
-<div class='tableauPlaceholder' id='viz1'>
-<object class='tableauViz'>
+
+<div class='tableauPlaceholder' id='viz1777215963315' style='position: relative'>
+<noscript>
+<a href='#'>
+<img alt='Patrones semanales de uso de la IA por tipo de consulta' 
+src='https://public.tableau.com/static/images/Pa/Patronessemanalesfix/Sheet1/1_rss.png' 
+style='border: none' />
+</a>
+</noscript>
+
+<object class='tableauViz' style='display:none;'>
 <param name='host_url' value='https://public.tableau.com/' />
 <param name='embed_code_version' value='3' />
-<param name='name' value='Tableau1_17771722291950/Sheet1' />
+<param name='name' value='Patronessemanalesfix/Sheet1' />
+<param name='tabs' value='no' />
 <param name='toolbar' value='yes' />
 </object>
+
 </div>
+
+<script type='text/javascript'>
+var divElement = document.getElementById('viz1777215963315');
+var vizElement = divElement.getElementsByTagName('object')[0];
+vizElement.style.width='100%';
+vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
 <span class="tool-credit">Tableau</span>
 </div>
 
 <p>
-Se observan concentraciones de uso en ciertos días con predominancia de niveles medios y altos, lo que refleja momentos de mayor carga cognitiva o exigencia.
+Se identifican patrones de uso diferenciados según el tipo de consulta, con mayor concentración en categorías académicas durante la semana.
 </p>
 </div>
 
@@ -194,7 +207,7 @@ El uso está dominado por consultas de nivel medio, mientras que los niveles alt
 </p>
 </div>
 
-<!-- 5 -->
+<!-- 5 RAW -->
 <div class="viz-section">
 <h2>5. ¿Cómo se relaciona el tipo de consulta con el nivel de necesidad?</h2>
 
@@ -207,21 +220,21 @@ width="100%">
 </div>
 
 <p>
-Las tareas académicas se asocian mayormente con niveles altos de necesidad, mientras que categorías como hogar o cocina se vinculan más con usos de baja exigencia.
+Las tareas académicas se asocian mayormente con niveles altos de necesidad, mientras que categorías cotidianas presentan niveles más bajos.
 </p>
 </div>
 
 <div class="intro-box">
 <h2>Conclusiones</h2>
 <ul>
-<li>Predominan consultas de nivel medio, lo que sugiere un uso orientado a optimización más que a dependencia total.</li>
-<li>Las consultas académicas concentran los niveles más altos de necesidad.</li>
-<li>El uso se mantiene relativamente constante a lo largo de la semana.</li>
-<li>La IA cumple un rol clave en tareas complejas, especialmente en contextos de estudio.</li>
+<li>Predominan consultas de nivel medio, indicando un uso orientado a optimización.</li>
+<li>Las tareas académicas concentran la mayor dependencia de la IA.</li>
+<li>El uso se distribuye de forma constante durante la semana.</li>
+<li>La IA se vuelve crítica en momentos puntuales de mayor exigencia.</li>
 </ul>
 
 <p>
-Este análisis permite entender mejor en qué momentos la IA funciona como herramienta esencial y cuándo actúa simplemente como facilitador.
+Este análisis permite entender mejor cuándo la IA actúa como herramienta esencial y cuándo funciona como simple facilitador.
 </p>
 </div>
 
@@ -230,8 +243,6 @@ Julia Priolo · InfoVis 2026
 </footer>
 
 </div>
-
-<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 
 </body>
 </html>
