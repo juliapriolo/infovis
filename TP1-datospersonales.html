@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Mis consultas a la IA - Julia Priolo</title>
+    <title>¿Cuándo realmente necesito la IA? - Julia Priolo</title>
+
     <style>
         :root {
             --bg: #0a0a0a;
             --card: #161616;
             --text: #ededed;
-            --low: #4dff88;  /* Verde */
-            --mid: #ff79c6;  /* Rosa */
-            --high: #ff4d4d; /* Rojo */
+            --low: #4dff88;
+            --mid: #ff79c6;
+            --high: #ff4d4d;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -26,202 +26,215 @@
         }
 
         .main-content {
-            max-width: 940px;
+            max-width: 950px;
             width: 100%;
         }
 
         h1 {
             font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: -1.5px;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #ffffff, #666666);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .tagline {
             color: #888;
-            font-size: 1.1rem;
             margin-bottom: 40px;
         }
 
         .intro-box {
             background: var(--card);
             padding: 30px;
-            border-radius: 24px;
+            border-radius: 20px;
             margin-bottom: 50px;
             line-height: 1.6;
-            border: 1px solid #222;
         }
 
         .levels {
             display: flex;
             gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .level {
             flex: 1;
-            min-width: 200px;
-            background: rgba(255,255,255,0.02);
-            padding: 20px;
-            border-radius: 16px;
+            padding: 15px;
+            border-radius: 12px;
             font-size: 0.9rem;
-            border-bottom: 4px solid transparent;
         }
 
-        .level b { display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1.5px; }
-        .level-low { border-color: var(--low); }
-        .level-low b { color: var(--low); }
-        .level-mid { border-color: var(--mid); }
-        .level-mid b { color: var(--mid); }
-        .level-high { border-color: var(--high); }
-        .level-high b { color: var(--high); }
+        .level-low { border-left: 4px solid var(--low); }
+        .level-mid { border-left: 4px solid var(--mid); }
+        .level-high { border-left: 4px solid var(--high); }
 
         .viz-section {
             margin-bottom: 60px;
         }
 
-        .viz-section h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .viz-description {
-            color: #888;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            max-width: 700px;
-        }
-
-        /* CORRECCIÓN AQUÍ: Ajuste del contenedor para Flourish */
         .viz-container {
-            background: #fff; 
-            padding: 20px; /* Reducido para dar más aire al gráfico */
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            display: block; /* Cambiado de flex a block */
-            width: auto;
-            overflow: hidden;
-        }
-
-        /* Asegura que el embed ocupe todo el ancho y tenga altura mínima */
-        .flourish-embed {
-            width: 100% !important;
-            min-height: 450px; /* Evita que el gráfico se colapse verticalmente */
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
         }
 
         .tool-credit {
             display: block;
             text-align: right;
-            margin-top: 15px;
-            font-size: 0.75rem;
-            color: #999;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        object {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        footer {
-            margin-top: 80px;
-            text-align: center;
-            padding-bottom: 40px;
-            border-top: 1px solid #222;
-            padding-top: 20px;
-            color: #444;
+            margin-top: 10px;
             font-size: 0.8rem;
+            color: #777;
         }
     </style>
 </head>
+
 <body>
 
 <div class="main-content">
-    <h1>¿Cuándo realmente necesito la IA?</h1>
-    <p class="tagline">Un análisis de mis consultas según cuánto me costaría resolverlas sin ayuda.</p>
 
-    <div class="intro-box">
-        <p>Durante varias semanas registré mis consultas para entender en qué situaciones realmente las necesito. Más allá de los temas, analicé el nivel de dependencia: <strong>¿cuánto me costaría resolver cada consulta por mi cuenta?</strong></p>
+<h1>¿Cuándo realmente necesito la IA?</h1>
 
-        <p>En general, la mayoría de mis interacciones son por comodidad, pero los momentos donde la IA se vuelve clave aparecen sobre todo en contextos académicos o lógicos.</p>
-        
-        <div class="levels">
-            <div class="level level-high">
-                <b>Nivel Alto</b>
-                Consultas difíciles o largas de resolver sola. La IA es una herramienta indispensable para avanzar.
-            </div>
-            <div class="level level-mid">
-                <b>Nivel Medio</b>
-                Situaciones que podría resolver, pero con más esfuerzo y tiempo. Me ayuda a destrabar ideas.
-            </div>
-            <div class="level level-low">
-                <b>Nivel Bajo</b>
-                Consultas simples que resolvería fácil sin IA. Funciona más como una comodidad.
-            </div>
-        </div>
+<p class="tagline">
+Un análisis personal de mis consultas para entender en qué contextos la IA es realmente indispensable.
+</p>
+
+<div class="intro-box">
+<p>
+Durante varias semanas registré mis consultas para analizar no solo cuánto uso la IA, sino en qué situaciones y con qué nivel de necesidad.
+</p>
+
+<p>
+La pregunta central es:
+<strong>¿En qué momentos la IA es realmente necesaria y cuándo es solo una comodidad?</strong>
+</p>
+
+<p>
+Clasifiqué cada consulta en tres niveles:
+</p>
+
+<div class="levels">
+    <div class="level level-high">
+        <b>Alto</b><br>
+        No podría resolverlo fácilmente sin IA.
     </div>
 
-    <div class="viz-section">
-        <h2>1. Frecuencia de consultas en Marzo</h2>
-        <p class="viz-description">
-            Acá se ve la cantidad de consultas diarias durante el mes. Los colores de las barras representan la necesidad: 
-            <span style="color:var(--low)">verde (baja)</span>, 
-            <span style="color:var(--mid)">rosa (media)</span> y 
-            <span style="color:var(--high)">rojo (alta)</span>.
-        </p>
-        <div class="viz-container"> 
-           <div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
-               <script src="https://public.flourish.studio/resources/embed.js"></script>
-               <noscript><img src="https://public.flourish.studio/visualisation/28285946/thumbnail" width="100%" alt="visualization" /></noscript>
-           </div>
-            <span class="tool-credit">Realizado con Flourish</span>
-        </div>
+    <div class="level level-mid">
+        <b>Medio</b><br>
+        Podría resolverlo, pero con esfuerzo.
     </div>
 
-    <div class="viz-section">
-        <h2>2. Proporción de necesidad por ámbito</h2>
-        <p class="viz-description">
-            Este gráfico muestra cómo se distribuye mi nivel de necesidad según el área de la consulta. 
-            Es interesante ver dónde se concentra el esfuerzo más alto.
-        </p>
-        <div class="viz-container">
-            <object
-                type="image/svg+xml"
-                data="https://juliapriolo.github.io/infovis/rawgraph-personal.svg"
-                width="860"
-                height="600">
-            </object>
-            <span class="tool-credit">Realizado con RAWGraphs</span>
-        </div>
+    <div class="level level-low">
+        <b>Bajo</b><br>
+        Lo usaría por comodidad.
     </div>
+</div>
+</div>
 
-    <div class="viz-section">
-        <h2>3. Frecuencia total por día de la semana</h2>
-        <p class="viz-description">
-            Este análisis permite identificar qué días concentran la mayor carga de consultas. 
-            Es una vista acumulada que revela mi rutina semanal típica.
-        </p>
-        <div class="viz-container">
-            <div style="min-height:535px" id="datawrapper-vis-EJfmj">
-                <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/EJfmj/embed.js" charset="utf-8" data-target="#datawrapper-vis-EJfmj"></script>
-                <noscript>
-                    <img src="https://datawrapper.dwcdn.net/EJfmj/full.png" alt="Frecuencia Total de Consultas por Día de la Semana" />
-                </noscript>
-            </div>
-            <span class="tool-credit">Realizado con Datawrapper</span>
-        </div>
-    </div>
+<!-- 1 BUBBLE -->
+<div class="viz-section">
+<h2>1. ¿En qué uso la IA?</h2>
+<p>
+El tamaño muestra volumen total de consultas por categoría, y el color el nivel predominante.
+</p>
 
-    <footer>Julia Priolo - Trabajo Práctico 1 - InfoVis 2026</footer>
+<div class="viz-container">
+<div class="flourish-embed flourish-bubble-chart" data-src="visualisation/28699311">
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</div>
+<span class="tool-credit">Flourish</span>
+</div>
+</div>
+
+<!-- 2 LINEA -->
+<div class="viz-section">
+<h2>2. Evolución diaria del uso</h2>
+<p>
+Muestra cómo varía la cantidad de consultas a lo largo del tiempo.
+</p>
+
+<div class="viz-container">
+<div class="flourish-embed flourish-chart" data-src="visualisation/28285946">
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</div>
+<span class="tool-credit">Flourish</span>
+</div>
+</div>
+
+<!-- 3 DATAWRAPPER -->
+<div class="viz-section">
+<h2>3. Frecuencia semanal</h2>
+<p>
+Cantidad total de consultas por día de la semana.
+</p>
+
+<div class="viz-container">
+<div id="datawrapper-vis-EJfmj"></div>
+<script src="https://datawrapper.dwcdn.net/EJfmj/embed.js"></script>
+<span class="tool-credit">Datawrapper</span>
+</div>
+</div>
+
+<!-- 4 TABLEAU HEATMAP -->
+<div class="viz-section">
+<h2>4. Patrones semanales</h2>
+
+<div class="viz-container">
+<div class='tableauPlaceholder' id='viz1'>
+<object class='tableauViz'>
+<param name='name' value='Tableau1_17771722291950/Sheet1'/>
+</object>
+</div>
+
+<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+
+<span class="tool-credit">Tableau</span>
+</div>
+</div>
+
+<!-- 5 TABLEAU LINE -->
+<div class="viz-section">
+<h2>5. Evolución de carga diaria</h2>
+
+<div class="viz-container">
+<div class='tableauPlaceholder' id='viz2'>
+<object class='tableauViz'>
+<param name='name' value='Evolucindelacargatotaldiariadeconsultassegnniveldenecesidad/Sheet1'/>
+</object>
+</div>
+
+<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+
+<span class="tool-credit">Tableau</span>
+</div>
+</div>
+
+<!-- 6 SANKEY -->
+<div class="viz-section">
+<h2>6. Relación entre tipo y nivel</h2>
+
+<div class="viz-container">
+<object
+type="image/svg+xml"
+data="https://juliapriolo.github.io/infovis/rawgraph-personal.svg"
+width="100%">
+</object>
+<span class="tool-credit">RAWGraphs</span>
+</div>
+</div>
+
+<div class="intro-box">
+<h2>Conclusiones</h2>
+
+<ul>
+<li>La mayoría de las consultas son de nivel medio → optimización más que dependencia.</li>
+<li>Facultad domina tanto en volumen como en necesidad alta.</li>
+<li>El uso es constante durante la semana, con leve caída en fines de semana.</li>
+<li>Las consultas complejas se concentran en contextos académicos.</li>
+</ul>
+</div>
+
+<footer>
+Julia Priolo · InfoVis 2026
+</footer>
+
 </div>
 
 </body>
