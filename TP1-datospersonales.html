@@ -83,7 +83,6 @@ h1 {
     color: #777;
 }
 
-/* FIX TABLEAU */
 .tableauPlaceholder {
     width: 100%;
 }
@@ -107,11 +106,15 @@ Un análisis personal de mis consultas para entender en qué contextos la IA es 
 
 <div class="intro-box">
 <p>
-Durante varias semanas registré mis consultas para analizar no solo cuánto uso la IA, sino en qué situaciones y con qué nivel de necesidad.
+Durante los meses de marzo y abril registré mis consultas para analizar no solo cuánto uso la IA, sino en qué situaciones y con qué nivel de necesidad.
 </p>
 
 <p>
 <strong>Pregunta:</strong> ¿Cuándo la IA es realmente necesaria y cuándo es solo comodidad?
+</p>
+
+<p>
+Las consultas fueron clasificadas según el tipo de tarea (Facultad, Intercambio, Información general, Salud, Cocina y Hogar) y el nivel de necesidad:
 </p>
 
 <div class="levels">
@@ -121,7 +124,7 @@ Durante varias semanas registré mis consultas para analizar no solo cuánto uso
 </div>
 </div>
 
-<!-- 1 BUBBLE -->
+<!-- 1 -->
 <div class="viz-section">
 <h2>1. ¿En qué uso la IA?</h2>
 <p>Volumen total por categoría. El color indica nivel predominante.</p>
@@ -132,11 +135,15 @@ Durante varias semanas registré mis consultas para analizar no solo cuánto uso
 </div>
 <span class="tool-credit">Flourish</span>
 </div>
+
+<p>
+Las consultas vinculadas a la facultad concentran el mayor volumen y tienden a niveles de necesidad más altos, lo que indica que la IA cumple un rol clave en tareas académicas.
+</p>
 </div>
 
-<!-- 2 DATAWRAPPER -->
+<!-- 2 -->
 <div class="viz-section">
-<h2>2. Frecuencia semanal</h2>
+<h2>2. ¿Cómo varía mi uso de IA durante la semana?</h2>
 <p>Cantidad de consultas por día de la semana.</p>
 
 <div class="viz-container">
@@ -144,11 +151,15 @@ Durante varias semanas registré mis consultas para analizar no solo cuánto uso
 <script src="https://datawrapper.dwcdn.net/EJfmj/embed.js"></script>
 <span class="tool-credit">Datawrapper</span>
 </div>
+
+<p>
+El uso se distribuye de forma bastante homogénea durante la semana, lo que sugiere que la IA forma parte de una rutina estable más que de momentos aislados.
+</p>
 </div>
 
-<!-- 3 TABLEAU HEATMAP -->
+<!-- 3 -->
 <div class="viz-section">
-<h2>3. Patrones semanales</h2>
+<h2>3. ¿Existen patrones en los días y niveles de uso?</h2>
 
 <div class="viz-container">
 <div class='tableauPlaceholder' id='viz1'>
@@ -161,11 +172,15 @@ Durante varias semanas registré mis consultas para analizar no solo cuánto uso
 </div>
 <span class="tool-credit">Tableau</span>
 </div>
+
+<p>
+Se observan concentraciones de uso en ciertos días con predominancia de niveles medios y altos, lo que refleja momentos de mayor carga cognitiva o exigencia.
+</p>
 </div>
 
-<!-- 4 TABLEAU LINE -->
+<!-- 4 -->
 <div class="viz-section">
-<h2>4. Evolución de carga diaria</h2>
+<h2>4. ¿Cómo evoluciona mi carga de uso a lo largo del tiempo?</h2>
 
 <div class="viz-container">
 <div class='tableauPlaceholder' id='viz2'>
@@ -178,11 +193,15 @@ Durante varias semanas registré mis consultas para analizar no solo cuánto uso
 </div>
 <span class="tool-credit">Tableau</span>
 </div>
+
+<p>
+La carga diaria fluctúa pero mantiene una tendencia constante, con picos asociados a días de mayor demanda académica.
+</p>
 </div>
 
-<!-- 5 SANKEY -->
+<!-- 5 -->
 <div class="viz-section">
-<h2>5. Relación entre tipo y nivel</h2>
+<h2>5. ¿Cómo se relaciona el tipo de consulta con el nivel de necesidad?</h2>
 
 <div class="viz-container">
 <object type="image/svg+xml"
@@ -191,16 +210,24 @@ width="100%">
 </object>
 <span class="tool-credit">RAWGraphs</span>
 </div>
+
+<p>
+Las tareas académicas se asocian mayormente con niveles altos de necesidad, mientras que categorías como hogar o cocina se vinculan más con usos de baja exigencia.
+</p>
 </div>
 
 <div class="intro-box">
 <h2>Conclusiones</h2>
 <ul>
-<li>Predominan consultas de nivel medio → optimización más que dependencia.</li>
-<li>Facultad concentra la mayor carga y necesidad alta.</li>
-<li>El uso es constante durante la semana.</li>
-<li>La IA es clave en contextos académicos.</li>
+<li>Predominan consultas de nivel medio, lo que sugiere un uso orientado a optimización más que a dependencia total.</li>
+<li>Las consultas académicas concentran los niveles más altos de necesidad.</li>
+<li>El uso se mantiene relativamente constante a lo largo de la semana.</li>
+<li>La IA cumple un rol clave en tareas complejas, especialmente en contextos de estudio.</li>
 </ul>
+
+<p>
+Este análisis permite entender mejor en qué momentos la IA funciona como herramienta esencial y cuándo actúa simplemente como facilitador.
+</p>
 </div>
 
 <footer style="text-align:center; margin-top:60px; color:#555;">
@@ -209,7 +236,6 @@ Julia Priolo · InfoVis 2026
 
 </div>
 
-<!-- SOLO UNA VEZ -->
 <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 
 </body>
