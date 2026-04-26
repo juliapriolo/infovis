@@ -1,89 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Cuándo realmente necesito la IA? - Julia Priolo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Cuándo realmente necesito la IA? - Julia Priolo</title>
 
-    <style>
-        :root {
-            --bg: #0a0a0a;
-            --card: #161616;
-            --text: #ededed;
-            --low: #4dff88;
-            --mid: #ff79c6;
-            --high: #ff4d4d;
-        }
+<style>
+:root {
+    --bg: #0a0a0a;
+    --card: #161616;
+    --text: #ededed;
+    --low: #4dff88;
+    --mid: #ff79c6;
+    --high: #ff4d4d;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
 
-        .main-content {
-            max-width: 950px;
-            width: 100%;
-        }
+.main-content {
+    max-width: 950px;
+    width: 100%;
+}
 
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
 
-        .tagline {
-            color: #888;
-            margin-bottom: 40px;
-        }
+.tagline {
+    color: #888;
+    margin-bottom: 40px;
+}
 
-        .intro-box {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 50px;
-            line-height: 1.6;
-        }
+.intro-box {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
 
-        .levels {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
+.levels {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
 
-        .level {
-            flex: 1;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-        }
+.level {
+    flex: 1;
+    padding: 15px;
+    border-radius: 12px;
+}
 
-        .level-low { border-left: 4px solid var(--low); }
-        .level-mid { border-left: 4px solid var(--mid); }
-        .level-high { border-left: 4px solid var(--high); }
+.level-low { border-left: 4px solid var(--low); }
+.level-mid { border-left: 4px solid var(--mid); }
+.level-high { border-left: 4px solid var(--high); }
 
-        .viz-section {
-            margin-bottom: 60px;
-        }
+.viz-section {
+    margin-bottom: 60px;
+}
 
-        .viz-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 20px;
-        }
+.viz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
 
-        .tool-credit {
-            display: block;
-            text-align: right;
-            margin-top: 10px;
-            font-size: 0.8rem;
-            color: #777;
-        }
-    </style>
+.tool-credit {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* FIX TABLEAU */
+.tableauPlaceholder {
+    width: 100%;
+}
+
+.tableauPlaceholder object {
+    width: 100% !important;
+    height: 600px !important;
+}
+</style>
 </head>
 
 <body>
@@ -102,38 +111,20 @@ Durante varias semanas registré mis consultas para analizar no solo cuánto uso
 </p>
 
 <p>
-La pregunta central es:
-<strong>¿En qué momentos la IA es realmente necesaria y cuándo es solo una comodidad?</strong>
-</p>
-
-<p>
-Clasifiqué cada consulta en tres niveles:
+<strong>Pregunta:</strong> ¿Cuándo la IA es realmente necesaria y cuándo es solo comodidad?
 </p>
 
 <div class="levels">
-    <div class="level level-high">
-        <b>Alto</b><br>
-        No podría resolverlo fácilmente sin IA.
-    </div>
-
-    <div class="level level-mid">
-        <b>Medio</b><br>
-        Podría resolverlo, pero con esfuerzo.
-    </div>
-
-    <div class="level level-low">
-        <b>Bajo</b><br>
-        Lo usaría por comodidad.
-    </div>
+<div class="level level-high"><b>Alto</b><br>No podría resolverlo sin IA</div>
+<div class="level level-mid"><b>Medio</b><br>Podría, pero con esfuerzo</div>
+<div class="level level-low"><b>Bajo</b><br>Solo comodidad</div>
 </div>
 </div>
 
 <!-- 1 BUBBLE -->
 <div class="viz-section">
 <h2>1. ¿En qué uso la IA?</h2>
-<p>
-El tamaño muestra volumen total de consultas por categoría, y el color el nivel predominante.
-</p>
+<p>Volumen total por categoría. El color indica nivel predominante.</p>
 
 <div class="viz-container">
 <div class="flourish-embed flourish-bubble-chart" data-src="visualisation/28699311">
@@ -143,13 +134,10 @@ El tamaño muestra volumen total de consultas por categoría, y el color el nive
 </div>
 </div>
 
-</div>
-
+<!-- 2 DATAWRAPPER -->
 <div class="viz-section">
 <h2>2. Frecuencia semanal</h2>
-<p>
-Cantidad total de consultas por día de la semana.
-</p>
+<p>Cantidad de consultas por día de la semana.</p>
 
 <div class="viz-container">
 <div id="datawrapper-vis-EJfmj"></div>
@@ -158,44 +146,46 @@ Cantidad total de consultas por día de la semana.
 </div>
 </div>
 
+<!-- 3 TABLEAU HEATMAP -->
 <div class="viz-section">
 <h2>3. Patrones semanales</h2>
 
 <div class="viz-container">
 <div class='tableauPlaceholder' id='viz1'>
 <object class='tableauViz'>
-<param name='name' value='Tableau1_17771722291950/Sheet1'/>
+<param name='host_url' value='https://public.tableau.com/' />
+<param name='embed_code_version' value='3' />
+<param name='name' value='Tableau1_17771722291950/Sheet1' />
+<param name='toolbar' value='yes' />
 </object>
 </div>
-
-<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
-
 <span class="tool-credit">Tableau</span>
 </div>
 </div>
 
+<!-- 4 TABLEAU LINE -->
 <div class="viz-section">
 <h2>4. Evolución de carga diaria</h2>
 
 <div class="viz-container">
 <div class='tableauPlaceholder' id='viz2'>
 <object class='tableauViz'>
-<param name='name' value='Evolucindelacargatotaldiariadeconsultassegnniveldenecesidad/Sheet1'/>
+<param name='host_url' value='https://public.tableau.com/' />
+<param name='embed_code_version' value='3' />
+<param name='name' value='Evolucindelacargatotaldiariadeconsultassegnniveldenecesidad/Sheet1' />
+<param name='toolbar' value='yes' />
 </object>
 </div>
-
-<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
-
 <span class="tool-credit">Tableau</span>
 </div>
 </div>
 
+<!-- 5 SANKEY -->
 <div class="viz-section">
 <h2>5. Relación entre tipo y nivel</h2>
 
 <div class="viz-container">
-<object
-type="image/svg+xml"
+<object type="image/svg+xml"
 data="https://juliapriolo.github.io/infovis/rawgraph-personal.svg"
 width="100%">
 </object>
@@ -205,20 +195,22 @@ width="100%">
 
 <div class="intro-box">
 <h2>Conclusiones</h2>
-
 <ul>
-<li>La mayoría de las consultas son de nivel medio → optimización más que dependencia.</li>
-<li>Facultad domina tanto en volumen como en necesidad alta.</li>
-<li>El uso es constante durante la semana, con leve caída en fines de semana.</li>
-<li>Las consultas complejas se concentran en contextos académicos.</li>
+<li>Predominan consultas de nivel medio → optimización más que dependencia.</li>
+<li>Facultad concentra la mayor carga y necesidad alta.</li>
+<li>El uso es constante durante la semana.</li>
+<li>La IA es clave en contextos académicos.</li>
 </ul>
 </div>
 
-<footer>
+<footer style="text-align:center; margin-top:60px; color:#555;">
 Julia Priolo · InfoVis 2026
 </footer>
 
 </div>
+
+<!-- SOLO UNA VEZ -->
+<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 
 </body>
 </html>
